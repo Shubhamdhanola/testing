@@ -1,0 +1,155 @@
+:root{
+    --buttonColor : rgb(0, 149, 255);
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Glory', sans-serif;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+}
+
+#nav{
+    display: flex;
+    height: 90px;
+    justify-content:space-between;
+    padding: 10px 65px;
+}
+
+#nav > *{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap:2px;
+}
+
+.nav-left > button{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    color: black;
+}
+
+.nav-left > button:nth-child(2){
+    background-color: var(--buttonColor);
+    color: white;
+    border: 1px solid white;
+}
+
+.nav-center > img{
+    height: 25%;
+    border-radius: 100%;
+    object-fit: cover;
+    margin-right:5px;
+}
+
+.nav-center > h2{
+ text-transform: uppercase;
+ font-size: medium;
+}
+
+button{
+    border-radius: 15px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.nav-right > .login{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    color: black;
+}
+
+.nav-right > .signup{
+    background-color: var(--buttonColor);
+    border: 1px solid white;
+    color: white;
+}
+
+/* Content */
+#hero{
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#hero > h1{
+    font-size: 200px;
+}
+
+#hero > .images{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+}
+
+.images > img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.images > img:nth-child(1){
+    transform: rotate(-30deg);
+}
+
+.images > img:nth-child(2){
+    transform: rotate(-20deg);
+}
+
+.images > img:nth-child(3){
+    transform: rotate(-10deg);
+}
+
+.images > img:nth-child(4){
+    transform: rotate(0deg);
+}
+
+/* Hero Footer */
+#hero-foot{
+    height:68px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 65px;
+    align-items: center;
+}
+
+#hero-foot > .arrow-down{
+    height: 30px;
+    margin-top: 20px;
+    border:1px solid black ;
+    border-bottom: 0px;
+    cursor: pointer;
+    padding:5px 20px;
+    font-size: 30px;
+    border-top-right-radius:50px ; 
+    border-top-left-radius:50px ; 
+}
+
+#hero-foot > .social-links{
+    display: flex;
+    font-size: 20px;
+    gap:10px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.social-links > i{
+    cursor: pointer;
+}
