@@ -134,26 +134,32 @@ button:hover{
 }
 
 /* On Hover Animation Effect */
-.images > img {
+.images > .imageBox {
     height: 100%;
     width: 100%;
     position: absolute;
-    object-fit: cover;
     border-radius: 15px;
     
     animation-duration: 3s;
     animation-fill-mode: forwards;
 }
 
-.images > img:nth-child(1){
+.imageBox > img{
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.images > .imageBox:nth-child(1){
     transform: rotate(-30deg);
 }
 
-.images > img:nth-child(2){
+.images > .imageBox:nth-child(2){
     transform: rotate(-20deg);
 }
 
-.images > img:nth-child(3){
+.images > .imageBox:nth-child(3){
     transform: rotate(-10deg);
 }
 

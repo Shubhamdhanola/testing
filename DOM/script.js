@@ -3,7 +3,7 @@ const cartAnimation = {
 
   onHover() {
     const targetImage = document.querySelector(".images");
-    let images = document.querySelectorAll(".images > img");
+    let images = document.querySelectorAll(".images > .imageBox");
 
     if (targetImage) {
       targetImage.addEventListener("mouseenter", () => {
@@ -22,7 +22,7 @@ const cartAnimation = {
 
   enlargeFirstImage(e) {
     // const currentImage = e.target.closest('img');
-    const currentImage = document.querySelector(".images > img:last-child");
+    const currentImage = document.querySelector(".images > .imageBox:last-child");
     if (currentImage && cartAnimation.zoom) {
       currentImage.style.transition = "transform 0.5s";
       currentImage.style.transform = "scale(1.2)";
@@ -30,7 +30,7 @@ const cartAnimation = {
   },
 
   reverseAnimation() {
-    let images = document.querySelectorAll(".images > img");
+    let images = document.querySelectorAll(".images > .imageBox");
     images.forEach((img, index) => {
       img.style.animationName = `hoverOn${index + 1}-reverse`;
       img.style.animationDirection = "normal";
