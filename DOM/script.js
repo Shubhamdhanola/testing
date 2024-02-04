@@ -26,19 +26,23 @@ const cartAnimation = {
     if (currentImage && cartAnimation.zoom) {
       currentImage.style.transition = "transform 0.5s";
       currentImage.style.transform = "scale(1.2)";
+      currentImage.querySelector('h2').style.display = 'flex';
     }
   },
 
   reverseAnimation() {
     let images = document.querySelectorAll(".images > .imageBox");
+    
     images.forEach((img, index) => {
       img.style.animationName = `hoverOn${index + 1}-reverse`;
       img.style.animationDirection = "normal";
       img.style.transform = "scale(1)";
       img.style.animationPlayState = "running";
+      img.querySelector('h2').style.display = 'none';
     });
 
     cartAnimation.zoom = false;
+
   },
 };
 
