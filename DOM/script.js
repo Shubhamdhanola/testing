@@ -30,6 +30,7 @@ const cartAnimation = {
     for (let i = 0; i < totalImages; i++) {
       let imageBox = document.createElement("div");
       imageBox.className = "imageBox";
+
       let imgElement = document.createElement("img");
       imgElement.src = this.images[i].url;
 
@@ -71,12 +72,17 @@ const cartAnimation = {
 
   enlargeFirstImage(e) {
     // const currentImage = e.target.closest('img');
-    const currentImage = document.querySelector(
-      ".images > .imageBox:last-child"
+    let imgCount = cartAnimation.images.length;
+    let currentImage = document.querySelector(
+      `.images > .imageBox:nth-child(${imgCount})`
     );
+
+    // const currentImage = document.querySelector(
+    //   ".images > .imageBox:last-child"
+    // );
     if (currentImage && cartAnimation.zoom) {
       currentImage.style.transition = "transform 0.5s";
-      currentImage.style.transform = "scale(1.2)";
+      currentImage.style.transform = "rotate(0deg) scale(1.2)";
       currentImage.querySelector("h2").style.display = "flex";
     }
   },
