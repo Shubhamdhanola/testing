@@ -71,20 +71,25 @@ const cartAnimation = {
   },
 
   enlargeFirstImage(e) {
-    // const currentImage = e.target.closest('img');
-    let imgCount = cartAnimation.images.length;
-    let currentImage = document.querySelector(
-      `.images > .imageBox:nth-child(${imgCount})`
-    );
+     let images = document.querySelectorAll(`.images > .imageBox`);
 
-    // const currentImage = document.querySelector(
-    //   ".images > .imageBox:last-child"
-    // );
-    if (currentImage && cartAnimation.zoom) {
-      currentImage.style.transition = "transform 0.5s";
-      currentImage.style.transform = "rotate(0deg) scale(1.2)";
-      currentImage.querySelector("h2").style.display = "flex";
+     if(images && cartAnimation.zoom){
+      images.forEach((img, index)=>{
+          img.style.transition = "transform 0.5s";
+          img.style.transform = "rotate(0deg) scale(1.2)";
+          img.querySelector("h2").style.display = "flex";
+      });
     }
+    
+    // let images = document.querySelector(`.images`);
+    // let currentImageBox = images.firstElementChild;
+    // let currentImg = currentImageBox.firstElementChild;
+
+    // if (currentImageBox && cartAnimation.zoom) {
+    //   currentImg.style.transition = "transform 0.5s";
+    //   currentImg.style.transform = "scale(1.2) rotate(0deg)";
+    //   currentImageBox.querySelector("h2").style.display = "flex";
+    // }
   },
 
   reverseAnimation() {
@@ -93,7 +98,7 @@ const cartAnimation = {
     images.forEach((img, index) => {
       img.style.animationName = `hoverOn${index + 1}-reverse`;
       img.style.animationDirection = "normal";
-      img.style.transform = "scale(1)";
+      img.style.transform = "scale(1) rotate(0deg)";
       img.style.animationPlayState = "running";
       img.querySelector("h2").style.display = "none";
     });

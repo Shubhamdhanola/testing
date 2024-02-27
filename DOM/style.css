@@ -171,29 +171,33 @@ button:hover{
 }
 
 .images > .imageBox:nth-child(1){
-    transform: rotate(-30deg);
+    transform: rotate(0deg);
+    z-index: 3;
 }
 
 .images > .imageBox:nth-child(2){
-    transform: rotate(-20deg);
+    transform: rotate(-10deg);
+    z-index: 2;
 }
 
 .images > .imageBox:nth-child(3){
-    transform: rotate(-10deg);
+    transform: rotate(-20deg);
+    z-index: 1;
 }
 
 .images > .imageBox:nth-child(4){
-    transform: rotate(0deg);
+    transform: rotate(-30deg);
+    z-index: 0;
 }
 
 @keyframes hoverOn1 {
-    from { transform: rotate(-30deg); }
+    from { transform: rotate(-10deg); }
     to { transform: rotate(0deg); }
 }
 
 @keyframes hoverOn1-reverse {
-    from { transform: rotate(0deg),scale(1.2); }
-    to { transform: rotate(-30deg); }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-10deg); }
 }
 
 @keyframes hoverOn2 {
@@ -207,11 +211,21 @@ button:hover{
 }
 
 @keyframes hoverOn3 {
-    from { transform: rotate(-10deg); }
+    from { transform: rotate(-30deg); }
     to { transform: rotate(0deg); }
 }
 
 @keyframes hoverOn3-reverse {
     from { transform: rotate(0deg); }
-    to { transform: rotate(-10deg); }
+    to { transform: rotate(-30deg); }
+}
+
+@keyframes hoverOn4 {
+    from { transform: rotate(-40deg); }
+    to { transform: rotate(0deg); }
+}
+
+@keyframes hoverOn4-reverse {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-40deg); }
 }
